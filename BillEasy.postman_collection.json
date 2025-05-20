@@ -1,0 +1,192 @@
+{
+  "info": {
+    "_postman_id": "a0686330-5fbe-4caf-969b-e2d1b602918d",
+    "name": "BillEasy",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26988681"
+  },
+  "item": [
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "health"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ravirajesh@gmail.com\",\r\n    \"password\": \"0987654321\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "auth", "register"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"ravirajesh403@gmail.com\",\r\n    \"password\": \"0987654321\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "auth", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "upload",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZpcmFqZXNoNDAzQGdtYWlsLmNvbSIsImlhdCI6MTc0NzczOTIzNywiZXhwIjoxNzQ3ODI1NjM3fQ.RYNNUcV_6XhahD5uf9ZsR2xleEcSTvToHNy9AlaIsVw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "title",
+              "value": "resume",
+              "type": "text"
+            },
+            {
+              "key": "description",
+              "value": "My bio",
+              "type": "text"
+            },
+            {
+              "key": "file",
+              "type": "file",
+              "src": "/C:/Users/ravi.rajesh/Downloads/Ravi_Resume.pdf"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/files/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "files", "upload"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get file",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZpcmFqZXNoNDAzQGdtYWlsLmNvbSIsImlhdCI6MTc0NzczOTIzNywiZXhwIjoxNzQ3ODI1NjM3fQ.RYNNUcV_6XhahD5uf9ZsR2xleEcSTvToHNy9AlaIsVw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/files/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "files", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get all files",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJyYXZpcmFqZXNoNDAzQGdtYWlsLmNvbSIsImlhdCI6MTc0NzczOTIzNywiZXhwIjoxNzQ3ODI1NjM3fQ.RYNNUcV_6XhahD5uf9ZsR2xleEcSTvToHNy9AlaIsVw",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/files/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["api", "files", ""]
+        }
+      },
+      "response": []
+    }
+  ]
+}
