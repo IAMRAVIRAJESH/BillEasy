@@ -27,16 +27,17 @@ A Node.js service for secure file uploads with background processing features.
 - Node.js 18 or higher
 - PostgreSQL
 - Redis (for BullMQ)
+- Docker desktop
 
 ### Installation
 
-1. Clone the repository - git clone https://github.com/yourusername/BillEasy.git and move to main directory using the command "cd file-upload-service"
+1. Clone the repository - git clone https://github.com/yourusername/BillEasy.git and move to main directory using the command "cd BillEasy"
 
 2. Install dependencies - run "npm install"
 
 3. Set up environment variables - Edit .env with your configuration
 
-4. Setup redis server using docker - run "docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest" in terminal after running docker desktop
+4. Setup redis server using docker - run "docker run -d --name redis-stack-server -p 6379:6379 -p 8001:8001 redis/redis-stack-server:latest" in terminal after running docker desktop. 8001:8001 is port where redis GUI is running so we can visualize what is happening in redis.
 
 4. Build the TypeScript code - npm run build
 
