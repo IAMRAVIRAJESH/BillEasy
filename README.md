@@ -86,7 +86,7 @@ This will start the app, PostgreSQL, and Redis services.
 
 # Background Processing Flow
 
-1. User uploads file → File saved to disk & metadata saved to DB
+1. User uploads file → File saved to local disk with uploads folder in the project directory & metadata is saved to DB
 2. Job added to BullMQ queue
 3. Worker processes file asynchronously
 4. File status updated in DB (uploaded → processing → processed/failed)

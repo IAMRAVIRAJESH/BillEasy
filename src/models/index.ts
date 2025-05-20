@@ -4,7 +4,7 @@ import File from './file'
 
 export const syncModels = async (): Promise<void> => {
   try {
-    await sequelize.sync({ force: true })
+    await sequelize.sync({ alter: true })
     console.log('Database models synchronized successfully')
   } catch (error) {
     console.error('Error synchronizing database models:', error)
