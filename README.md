@@ -41,8 +41,7 @@ A Node.js service for secure file uploads with background processing features.
 
 4. Build the TypeScript code - npm run build
 
-5. Start the server - npm run dev
-
+5. Start the server and sync database - "npm run dev". This command will run the server and synchronize the database with models, associations, relations and anything that is described in the model files.
 
 ### Docker Setup
 
